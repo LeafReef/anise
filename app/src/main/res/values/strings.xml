@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LeafReef</string>
+    <string name="app_title">LeafReef</string>
+    <string name="background">background</string>
+    <string name="temp_text">Temp</string>
+    <string name="temp_image">temp_image</string>
+    <string name="hum_image">hum_image</string>
+    <string name="hum_text">Hum</string>
+    <string name="refresh_image">refresh</string>
+    <string name="refresh_text">Refresh</string>
 </resources>

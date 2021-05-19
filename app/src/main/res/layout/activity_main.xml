@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/dashbord_bacground" />
+        android:src="@drawable/background"
+        android:contentDescription="@string/background" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -31,19 +32,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato_bold"
-            android:text="Aura"
+            android:text="@string/app_title"
             android:textColor="@color/text_color_header"
             android:textSize="28sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="Smart home app"
-            android:textColor="@color/text_color_description"
-            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +67,7 @@
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="0dp"
-                >
+                tools:ignore="NestedWeights">
 
 
                 <LinearLayout
@@ -90,19 +82,19 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_margin="20dp"
-                        android:background="@drawable/general_img_background"
+                        android:background="@drawable/card_background"
                         android:padding="25dp"
                         android:src="@drawable/temp_icon"
                         app:tint="#fff"
-                        android:contentDescription="TODO" />
+                        android:contentDescription="@string/temp_image" />
 
                     <TextView
                         android:id="@+id/temperature_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato_black"
-                        android:text="Temp"
-                        android:textColor="#257FC5"
+                        android:text="@string/temp_text"
+                        android:textColor="#3DC2AD"
                         android:textSize="22sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -130,111 +122,25 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_margin="20dp"
-                        android:background="@drawable/transport_ing_background"
+                        android:background="@drawable/card_background"
                         android:padding="25dp"
                         android:src="@drawable/hum_icon"
-                        app:tint="#fff" />
+                        app:tint="#fff"
+                        android:contentDescription="@string/hum_image" />
 
                     <TextView
                         android:id="@+id/humidity_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato_black"
-                        android:text="Hum"
-                        android:textColor="#7159CF"
+                        android:text="@string/hum_text"
+                        android:textColor="#3DC2AD"
                         android:textSize="22sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="toggleOn"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/background_color_50"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/entertainment_img_background"
-                        android:padding="25dp"
-                        android:src="@drawable/on_icon"
-                        app:tint="#fff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato_black"
-                        android:text="On"
-                        android:textColor="#5569BF"
-                        android:textSize="22sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="toggleOff"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/background_color_50"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/grocery_img_background"
-                        android:padding="25dp"
-                        android:src="@drawable/off_icon"
-                        app:tint="#fff"
-                        android:contentDescription="TODO" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato_black"
-                        android:text="Off"
-                        android:textColor="#257051"
-                        android:textSize="22sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -254,7 +160,7 @@
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="0dp"
-                tools:ignore="NestedWeights">
+                tools:ignore="NestedWeights,UsingOnClickInXml">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -267,19 +173,19 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_margin="20dp"
-                        android:background="@drawable/shopping_ing_background"
+                        android:background="@drawable/card_background"
                         android:padding="25dp"
                         android:src="@drawable/refresh_icon"
                         app:tint="#fff"
-                        android:contentDescription="TODO" />
+                        android:contentDescription="@string/refresh_image" />
 
                     <TextView
                         android:id="@+id/refresh_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato_black"
-                        android:text="Refresh"
-                        android:textColor="#D84DCA"
+                        android:text="@string/refresh_text"
+                        android:textColor="#3DC2AD"
                         android:textSize="22sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

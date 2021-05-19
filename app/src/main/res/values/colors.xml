@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background_color">#FBFBFD</color>
+    <color name="background_color_50">#B3FFFFFF</color>
+    <color name="text_color_header">#323232</color>
+    <color name="text_color_description">#616161</color>
+
+    <color name="ic_launcher_background">#2C6BED</color>
 </resources>
